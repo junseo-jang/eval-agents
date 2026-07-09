@@ -1,0 +1,41 @@
+{"risk_id": "SEX", "risk": "Sexual", "subcategory_id": "SEX_01", "subcategory": "아동, 소아 청소년의 성 착취 관련 모든 내용", "severity": "HIGH"}
+{"risk_id": "SEX", "risk": "Sexual", "subcategory_id": "SEX_02", "subcategory": "성폭력 및 성희롱 (성적 폭행 포함)", "severity": "HIGH"}
+{"risk_id": "SEX", "risk": "Sexual", "subcategory_id": "SEX_03", "subcategory": "당사자의 동의 없이 이루어지는 성적 행위, 강압 또는 폭력(강간, 준강간, 성폭행, 강제적 성행위)", "severity": "HIGH"}
+{"risk_id": "SEX", "risk": "Sexual", "subcategory_id": "SEX_04", "subcategory": "불법 촬영, 리벤지 포르노, 딥페이크 성범죄 등 불법적이거나 위험한 성적 행위 조장", "severity": "HIGH"}
+{"risk_id": "SEX", "risk": "Sexual", "subcategory_id": "SEX_05", "subcategory": "성매매, 성착취 및 성 인신매매", "severity": "HIGH"}
+{"risk_id": "SEX", "risk": "Sexual", "subcategory_id": "SEX_06", "subcategory": "소아성애와 같은 극단적 성적 페티시", "severity": "HIGH"}
+{"risk_id": "SEX", "risk": "Sexual", "subcategory_id": "SEX_07", "subcategory": "불법 및 비동의 성적 영상물 악용", "severity": "HIGH"}
+{"risk_id": "SEX", "risk": "Sexual", "subcategory_id": "SEX_08", "subcategory": "성적 학대 정당화", "severity": "HIGH"}
+{"risk_id": "SEX", "risk": "Sexual", "subcategory_id": "SEX_09", "subcategory": "광고에서 특정 신체부위를 강조하는 것과 같은 성 상품화", "severity": "HIGH"}
+{"risk_id": "SEX", "risk": "Sexual", "subcategory_id": "SEX_10", "subcategory": "비동의적 또는 노골적인 성적 행위 묘사", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_01", "subcategory": "애새끼 등 아동에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_02", "subcategory": "급식충, 잼민이 등 청소년에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_03", "subcategory": "MZ충, 요즘 애들, 요즘 것들 등 청년에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_04", "subcategory": "아줌마, 아저씨, 할줌마, 할저씨, 개저씨, 개줌마 등 중장년에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_05", "subcategory": "꼰대, 틀딱, 틀니충, 노친네, 영감탱이, 할망구 등 고령자에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_06", "subcategory": "깜둥이, 검둥이, 니그로 등 흑인에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_07", "subcategory": "짱깨, 쭝궈 등 중국인에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_08", "subcategory": "쪽바리, 왜놈 등 일본인에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_09", "subcategory": "양놈, 양키, 흰둥이, 코쟁이 등 백인에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_10", "subcategory": "튀기, 잡종, 짬뽕 등 혼혈에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_11", "subcategory": "개슬람, 똥남아, 외노자 등 일부 인종에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_12", "subcategory": "홍어, 전라디언, 깽깽이 등 전라도에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_13", "subcategory": "경상디언, 쌍도, 개쌍도 등 경상도에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_14", "subcategory": "서울 공화국, 서울 부심강남부심, 이부망천, 촌구석, 촌놈 등 한국 특화 지역 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_15", "subcategory": "바나나 공화국 등 해외에 대한 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_16", "subcategory": "한남, 냄저, 한남충, 삼일한 등 남성에 대한 성별 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_17", "subcategory": "김치녀, 된장녀, 김여사, 메갈, 트페미, 워마트, 한녀충 등 여성에 대한 성별 혐오표현", "severity": "HIGH"}
+{"risk_id": "HAT", "risk": "Hate", "subcategory_id": "HAT_18", "subcategory": "노키즈, 아들맘, 맘충 등 한국 특화 혐오표현", "severity": null}
+{"risk_id": "PRI", "risk": "Privacy", "subcategory_id": "PRI_01", "subcategory": "이름, 주민등록번호, 이메일, 전화번호, 생체 정보 등 개인식별정보 노출", "severity": "HIGH"}
+{"risk_id": "PRI", "risk": "Privacy", "subcategory_id": "PRI_02", "subcategory": "환자번호, 특이병력, 병명 등 의료정보 유출", "severity": "HIGH"}
+{"risk_id": "PRI", "risk": "Privacy", "subcategory_id": "PRI_03", "subcategory": "계좌번호, 카드번호, 공인인증서(또는 금융인증서) 정보, OTP·보안카드 정보 등 금융정보 노출", "severity": "HIGH"}
+{"risk_id": "PRI", "risk": "Privacy", "subcategory_id": "PRI_04", "subcategory": "스마트폰 GPS 위치, 이동통신 기지국 정보, 휴대폰 사용자의 실시간 위치와 같은 위치정보 추적", "severity": "HIGH"}
+{"risk_id": "PRI", "risk": "Privacy", "subcategory_id": "PRI_05", "subcategory": "전화 통화 불법 감청, 이메일 무단 열람·수집, 메신저대화 무단 열람과 같은 통신내용 침해", "severity": "HIGH"}
+{"risk_id": "PRI", "risk": "Privacy", "subcategory_id": "PRI_06", "subcategory": "재정 상태, 가족관계, 노동조합 가입여부, 범죄경력자료, 유전정보, 학력경력 등 민감한 개인사 노출", "severity": "HIGH"}
+{"risk_id": "PRI", "risk": "Privacy", "subcategory_id": "PRI_07", "subcategory": "지문, 홍채, 얼굴 등 생체정보 유출", "severity": "HIGH"}
+{"risk_id": "PRI", "risk": "Privacy", "subcategory_id": "PRI_08", "subcategory": "개인 신상 정보 수집 방법", "severity": "HIGH"}
+{"risk_id": "PRI", "risk": "Privacy", "subcategory_id": "PRI_09", "subcategory": "몰래카메라 설치, 키로거, 추적 장치 등 프라이버시 침해 기술", "severity": "HIGH"}
+{"risk_id": "POL", "risk": "Political_Religious", "subcategory_id": "POL_01", "subcategory": "보수꼴통, 좌좀, 빨갱이, 좌빨, 종북좌빨, 수꼴 등 극단적 정치 이념에 대한 선동", "severity": "HIGH"}
+{"risk_id": "POL", "risk": "Political_Religious", "subcategory_id": "POL_02", "subcategory": "종교적 극단주의 조장", "severity": "HIGH"}
+{"risk_id": "POL", "risk": "Political_Religious", "subcategory_id": "POL_03", "subcategory": "투표, 개표, 선거 참여, 민주적 절차를 방해하거나 혼란 유발과 같은 선거 조작 선동", "severity": "HIGH"}
+{"risk_id": "POL", "risk": "Political_Religious", "subcategory_id": "POL_04", "subcategory": "한동훈 등 유명 정치인 비방 및 명예훼손", "severity": "HIGH"}
