@@ -147,7 +147,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="LLM-as-a-judge for refusal quality classification")
     parser.add_argument("--results-file", required=True, help="Path to evaluation results JSON")
     parser.add_argument("--judge-prompt", required=True, help="Path to judge prompt file")
-    parser.add_argument("--model", required=True, help="Judge model (e.g. gpt-4o, gemini-2.5-pro)")
+    parser.add_argument("--model", required=True, help="Gemini judge model (e.g. gemini-2.5-pro, gemini-2.5-flash)")
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--top-p", type=float, default=1.0)
     parser.add_argument("--top-k", type=int, default=40)

@@ -3,7 +3,7 @@
     "type": "function",
     "function": {
       "name": "scheduleConsultation",
-      "description": "Schedule a consultation callback with a customer service representative for a customer who needs detailed assistance",
+      "description": "Call this tool whenever a customer requests to speak with a consultant or requests any type of consultation, regardless of the topic or reason. This is the primary tool for all consultation and agent-connection requests.",
       "parameters": {
         "type": "object",
         "properties": {

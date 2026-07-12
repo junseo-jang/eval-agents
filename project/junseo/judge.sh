@@ -6,7 +6,7 @@ set -euo pipefail
 # =============================================================
 
 # ---- Configuration (edit these) ----
-JUDGE_MODEL="gemini-2.5-pro"             # judge model: e.g. gemini-2.5-pro, gpt-4o
+JUDGE_MODEL="gemini-2.5-pro"             # judge model: gemini-2.5-pro | gemini-2.5-flash | gemini-2.5-flash-lite
 
 JUDGE_PROMPT_FILE="prompts/judge_prompt.txt"
 

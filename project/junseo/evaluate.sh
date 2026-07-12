@@ -6,12 +6,14 @@ set -euo pipefail
 # =============================================================
 
 # ---- Configuration (edit these) ----
-TASK="all"                                # task to evaluate: all | scheduleConsultation | resetPassword | payInvoice | updatePersonalInformation
-AGENT_MODEL="gemini-2.5-flash"            # model to evaluate: e.g. gemini-2.5-pro, gpt-4o
+TASK="all"                                # 필터: all | SVC_001 | SVC_002 | ...
+AGENT_MODEL="gemini-2.5-flash"            # gemini-2.5-pro | gemini-2.5-flash | gemini-2.5-flash-lite
 
-SYSTEM_PROMPT_FILE="prompts/system_prompt.txt"
+INTENDED_FILE="data/intended_utterances.jsonl"
+UNINTENDED_FILE="data/unintended_utterances.jsonl"
+SYSTEM_PROMPT_FILE="prompts/system_prompt.txt"      # system_prompt_en.txt for English version
 TOOLS_FILE="tools/tools.json"
-EVALUATION_SET="data/evaluation_set.json"
+SERVICE_MAP_FILE="tools/service_map.json"
 
 TEMPERATURE=0.0
 TOP_P=1.0
@@ -35,11 +37,13 @@ else
 fi
 
 python src/evaluate.py \
+    --intended        "$INTENDED_FILE" \
+    --unintended      "$UNINTENDED_FILE" \
     --task            "$TASK" \
     --model           "$AGENT_MODEL" \
     --system-prompt   "$SYSTEM_PROMPT_FILE" \
     --tools           "$TOOLS_FILE" \
-    --evaluation-set  "$EVALUATION_SET" \
+    --service-map     "$SERVICE_MAP_FILE" \
     --temperature     "$TEMPERATURE" \
     --top-p           "$TOP_P" \
     --top-k           "$TOP_K" \
