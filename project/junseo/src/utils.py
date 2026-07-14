@@ -4,11 +4,18 @@ from pathlib import Path
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
+from langfuse import Langfuse
 
 ENV_PATH = Path(__file__).parent.parent.parent.parent / ".env"
 load_dotenv(dotenv_path=ENV_PATH)
 
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+
+langfuse = Langfuse(
+    public_key=os.getenv("LANGFUSE_PUBLIC_KEY"),
+    secret_key=os.getenv("LANGFUSE_SECRET_KEY"),
+    host=os.getenv("LANGFUSE_HOST"),
+)
 
 
 def _validate_model(model: str) -> None:
@@ -73,31 +80,40 @@ def call_with_tools(
         top_k=top_k,
     )
 
-    response = client.models.generate_content(
+    with langfuse.start_as_current_generation(
+        name="gemini-tool-call",
         model=model,
-        contents=user_message,
-        config=config,
-    )
+        input={"system": system_prompt, "user": user_message},
+        model_parameters={"temperature": temperature, "top_p": top_p, "top_k": top_k},
+    ) as gen:
+        response = client.models.generate_content(
+            model=model,
+            contents=user_message,
+            config=config,
+        )
 
-    candidate = response.candidates[0] if response.candidates else None
+        candidate = response.candidates[0] if response.candidates else None
 
-    if candidate and candidate.content and candidate.content.parts:
-        for part in candidate.content.parts:
-            if part.function_call and part.function_call.name:
-                fc = part.function_call
-                return {
-                    "called_tool": True,
-                    "tool_name": fc.name,
-                    "tool_args": dict(fc.args) if fc.args else {},
-                    "response_text": None,
-                }
+        if candidate and candidate.content and candidate.content.parts:
+            for part in candidate.content.parts:
+                if part.function_call and part.function_call.name:
+                    fc = part.function_call
+                    result = {
+                        "called_tool": True,
+                        "tool_name": fc.name,
+                        "tool_args": dict(fc.args) if fc.args else {},
+                        "response_text": None,
+                    }
+                    gen.update(output={"tool_name": fc.name, "tool_args": result["tool_args"]})
+                    return result
 
-    # No tool call — blocked by safety filter or text refusal
-    try:
-        text = response.text
-    except Exception:
-        finish = candidate.finish_reason if candidate else "unknown"
-        text = f"[blocked: finish_reason={finish}]"
+        try:
+            text = response.text
+        except Exception:
+            finish = candidate.finish_reason if candidate else "unknown"
+            text = f"[blocked: finish_reason={finish}]"
+
+        gen.update(output={"response_text": text})
 
     return {
         "called_tool": False,
@@ -125,9 +141,18 @@ def call_text(
         top_k=top_k,
     )
 
-    response = client.models.generate_content(
+    with langfuse.start_as_current_generation(
+        name="gemini-text-call",
         model=model,
-        contents=user_message,
-        config=config,
-    )
-    return response.text
+        input={"system": system_prompt, "user": user_message},
+        model_parameters={"temperature": temperature, "top_p": top_p, "top_k": top_k},
+    ) as gen:
+        response = client.models.generate_content(
+            model=model,
+            contents=user_message,
+            config=config,
+        )
+        text = response.text
+        gen.update(output={"response_text": text})
+
+    return text

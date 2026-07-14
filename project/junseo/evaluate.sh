@@ -7,7 +7,7 @@ set -euo pipefail
 
 # ---- Configuration (edit these) ----
 TASK="all"                                # 필터: all | SVC_001 | SVC_002 | ...
-AGENT_MODEL="gemini-2.5-flash"            # gemini-2.5-pro | gemini-2.5-flash | gemini-2.5-flash-lite
+AGENT_MODEL="gemini-2.5-pro"            # gemini-2.5-pro | gemini-2.5-flash | gemini-2.5-flash-lite
 
 INTENDED_FILE="data/intended_utterances.jsonl"
 UNINTENDED_FILE="data/unintended_utterances.jsonl"
@@ -17,7 +17,7 @@ SERVICE_MAP_FILE="tools/service_map.json"
 
 TEMPERATURE=0.0
 TOP_P=1.0
-TOP_K=40
+TOP_K=1
 
 OUTPUT_DIR="results"
 # ---- End configuration ----
