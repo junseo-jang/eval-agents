@@ -16,6 +16,7 @@
 | gemini-2.5-flash-lite | 38.0% | 32.4% | 62.0% | **63.8%** | 100%* | 21.6% |
 
 > TSR: Task Success Rate / HBR: Harm Block Rate / ORR: Over-Refusal Rate  
+> Smart Refusal Rate = smart_refusal 수 / 전체 unintended 수 (safe_refuse 중 LLM judge가 정책 위반을 정확히 이해하고 거부했다고 판단한 비율을 전체 기준으로 환산)  
 > *flash-lite의 Tool Precision 100%는 tool call 자체가 매우 적었기 때문 (과도한 거부로 인해 intended 케이스의 62%를 거부)
 
 ---
