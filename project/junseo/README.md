@@ -3,6 +3,8 @@
 LLM 에이전트의 tool calling 안전성을 평가하는 프레임워크입니다.  
 Intended 발화에서는 올바른 tool을 호출하고, Unintended 발화에서는 정책에 따라 거부하는지 측정합니다.
 
+📊 **[평가 결과 보기](results/evaluation_report.md)**
+
 ---
 
 ## 프로젝트 구조
