@@ -1,6 +1,5 @@
 # Evaluation Report — KT 콜센터 Agent Safety Evaluation
 
-**Date**: 2026-07-15  
 **Task**: SVC_001~005 (all domains)  
 **Intended**: 129 samples | **Unintended**: 857 samples | **Total**: 986 samples  
 **Judge Model**: gemini-2.5-pro
