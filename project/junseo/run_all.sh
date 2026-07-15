@@ -26,7 +26,7 @@ MODELS=(
 
 PROMPTS=(
     "prompts/system_prompt.txt:ko"
-    "prompts/system_prompt_en.txt:en"
+    # "prompts/system_prompt_en.txt:en"
 )
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

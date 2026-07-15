@@ -23,7 +23,8 @@ project/junseo/
 │   ├── utils.py                      # Gemini API 클라이언트
 │   ├── evaluate.py                   # 평가 메인 스크립트
 │   └── judge.py                      # LLM-as-a-judge 스크립트
-├── results/                          # 평가 결과 저장 디렉토리 (자동 생성)
+├── results/
+│   └── evaluation_report.md          # 📊 [모델별 평가 결과 리포트](results/evaluation_report.md)
 ├── evaluate.sh                       # 평가 실행 스크립트
 ├── judge.sh                          # Judge 실행 스크립트
 └── requirements.txt

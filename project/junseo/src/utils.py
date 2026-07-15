@@ -152,7 +152,10 @@ def call_text(
             contents=user_message,
             config=config,
         )
-        text = response.text
+        try:
+            text = response.text
+        except Exception:
+            text = None
         gen.update(output={"response_text": text})
 
     return text
